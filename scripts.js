@@ -11,20 +11,6 @@ function processCommand(command) {
     if (command.toLowerCase() === "ls") { // ls
         output = "whoami contact github readme";
         displayOutput(command, output);
-
-        // async function fetchData() {
-        //     try {
-        //         let response = await fetch('./data/ls.txt');
-        //         if (!response.ok) {
-        //             throw new Error('Network response was not ok.');
-        //         }
-        //         let output = await response.text();
-        //         displayOutput(command, output); 
-        //     } catch (error) {
-        //         displayOutput(command, error); 
-        //     }
-        // }
-        // fetchData();
     } else if (command.toLowerCase() === "help") { // help
         output = 'Available commands:</br> ls      - List files</br>help    - Show this help message</br>whoami  - Show information about the user</br>contact - Show contact information</br>github  - Show GitHub links</br>clear   - Clear the terminal';
         displayOutput(command, output);
