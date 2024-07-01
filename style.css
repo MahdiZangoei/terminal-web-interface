@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: monospace;
+    font-size: 14px;
+    color: #c8cfd8;
+    background: #343944;
+    margin: auto;
+    padding-top: 60px;
+    line-height: 1.3em;
+}
+a {
+    color: #5294e2;
+}
+b {
+    color: #6a9e41;
+}
+.window {
+  background: #404552;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  border: 2px solid #2e333f;
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.window_content {
+  padding: 7px;
+  overflow-y: auto; 
+  width: 100%;
+  flex: 1; 
+  font-size: 100%;
+  line-height: 100%;
+}
+
+.window_content::-webkit-scrollbar {
+  width: 12px; 
+}
+
+
+.window_content::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1; 
+  border-radius: 10px; 
+  border: 3px solid #404552; 
+}
+
+
+.window_header {
+    background: #2e333f;
+    color: #c8cfd8;
+    padding: 7px;
+
+}
+.window_title {
+    display: inline-block;
+}
+.window_minimize_button,.window_maximize_button,.window_close_button {
+    border-radius: 7px;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    float: right;
+    margin-left: 6px;
+}
+.window_minimize_button {
+    background: #2cc640;
+    border: 1px solid #51a75c;
+
+}
+.window_maximize_button {
+    background: #fdbf2e;
+    border: 1px solid #d6a839;
+}
+.window_close_button {
+    background: #fe6256;
+    border: 1px solid #ca5f59;
+}
+
+.blink {
+    animation: blinking 1s infinite;
+}
+@keyframes blinking {
+    0% {
+        clear: both;
+    }
+    50% {
+        color: transparent;
+    }
+}
+h1{
+    font-size: 20px;
+}
+@keyframes typing {
+  0.0000%, 27.3488% { content: ""; }
+  1.1395%, 26.2093% { content: "W"; }
+  2.2791%, 25.0698% { content: "Wo"; }
+  3.4186%, 23.9302% { content: "Wor"; }
+  4.5581%, 22.7907% { content: "Worl"; }
+  5.6977%, 21.6512% { content: "World"; }
+  6.8372%, 20.5116% { content: "World!"; }
+  30.7674%, 51.2791% { content: ""; }
+  31.9070%, 50.1395% { content: "W"; }
+  33.0465%, 49.0000% { content: "Wo"; }
+  34.1860%, 47.8605% { content: "Wor"; }
+  35.3256%, 46.7209% { content: "Worl"; }
+  36.4651%, 45.5814% { content: "World"; }
+  37.6047%, 44.4419% { content: "World!"; }
+  54.6977%, 75.2093% { content: ""; }
+  55.8372%, 74.0698% { content: "W"; }
+  56.9767%, 72.9302% { content: "Wo"; }
+  58.1163%, 71.7907% { content: "Wor"; }
+  59.2558%, 70.6512% { content: "Worl"; }
+  60.3953%, 69.5116% { content: "World"; }
+  61.5349%, 68.3721% { content: "World!"; }
+  78.6279%, 96.8605% { content: ""; }
+  79.7674%, 95.7209% { content: "W"; }
+  80.9070%, 94.5814% { content: "Wo"; }
+  82.0465%, 93.4419% { content: "Wor"; }
+  83.1860%, 92.3023% { content: "Worl"; }
+  84.3256%, 91.1628% { content: "World"; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.typewriter {
+  --caret: currentcolor;
+}
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+  @keyframes sequencePopup {
+    0%, 100% { content: "world"; }
+    25% { content: "world"; }
+    50% { content: "world"; }
+    75% { content: "world"; }
+  }
+  .typewriter::before {
+    content: "world";
+    animation: sequencePopup 12s linear infinite;
+  }
+}
+
+#user_input{
+  color: #c8cfd8;
+  border: none;
+  font-family: monospace;
+  background-color: transparent;
+  font-size: 100%;
+  outline: none; 
+  box-shadow: none; 
+}
